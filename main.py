@@ -50,14 +50,6 @@ email_label.grid(row=2, column=0)
 password_label = Label(text="Password:")
 password_label.grid(row=3, column=0)
 
-"""
-Sticky
-
-When the widget is smaller than the cell, sticky is used to indicate which sides and corners of the cell the widget sticks to.
-The direction is defined by compass directions: N, E, S, W, NE, NW, SE, and SW and zero.
-These could be a string concatenation, for example, NESW make the widget take up the full area of the cell.
-"""
-
 # Entries
 website_entry = Entry()
 website_entry.grid(row=1, column=1, columnspan=2, sticky=EW)
