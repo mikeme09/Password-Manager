@@ -38,35 +38,38 @@ window.config(padx=30, pady=30)
 canvas = Canvas(width=210, height=200)
 logo_img = PhotoImage(file="logo1.png")
 canvas.create_image(110, 100, image=logo_img)
-canvas.grid(row=0, column=1)
+canvas.grid(row=1, column=1)
 
 # Labels
+t = Label(text="Password Manager", font=("Courier", 25, 'bold'))
+t.grid(row=0, column=1)
+
 website_label = Label(text="Website:")
-website_label.grid(row=1, column=0)
+website_label.grid(row=2, column=0)
 
 email_label = Label(text="Email/Username:")
-email_label.grid(row=2, column=0)
+email_label.grid(row=3, column=0)
 
 password_label = Label(text="Password:")
-password_label.grid(row=3, column=0)
+password_label.grid(row=4, column=0)
 
 # Entries
 website_entry = Entry()
-website_entry.grid(row=1, column=1, columnspan=2, sticky=EW)
+website_entry.grid(row=2, column=1, columnspan=2, sticky=EW)
 website_entry.focus()
 
 email_entry = Entry()
-email_entry.grid(row=2, column=1, columnspan=2, sticky=EW)
+email_entry.grid(row=3, column=1, columnspan=2, sticky=EW)
 # email_entry.insert(END, "michael.arco@gmail.com")  # END is from the tkinter CONSTANT
 
 password_entry = Entry()
-password_entry.grid(row=3, column=1, sticky=EW)
+password_entry.grid(row=4, column=1, sticky=EW)
 
 # Buttons
 generate_password = Button(text="Generate Password", command=gen_pass)
-generate_password.grid(row=3, column=2)
+generate_password.grid(row=4, column=2)
 
 add_button = Button(text="Add", command=save_data)
-add_button.grid(row=4, column=1, columnspan=2, sticky=EW)
+add_button.grid(row=5, column=1, columnspan=2, sticky=EW)
 
 window.mainloop()
